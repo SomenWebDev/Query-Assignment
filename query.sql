@@ -16,4 +16,16 @@ INSERT INTO users(full_name, email, role, phone_number) VALUES
   ('Tanvir Rahman', 'info@tabvir.com', 'Football Fan', +8801714924473),
   ('Asif Haque', 'info@asif.com', 'Football Fan', +8801980000473),
   ('Sajjad Rahman', 'info@sajjad.com', 'Football Fan', +8801814924473),
-  ('Jannat Ara', 'info@jannat.com', 'Football Fan', +8801830765243);
+  ('Jannat Ara', 'info@jannat.com', 'Football Fan', NULL);
+
+  -- create matches table
+CREATE TABLE matches (
+    match_id INT PRIMARY KEY,
+    fixture VARCHAR(100) NOT NULL,
+    tournament_category VARCHAR(50) NOT NULL,
+    base_ticket_price NUMERIC(10,2) NOT NULL,
+    match_status VARCHAR(20) NOT NULL CHECK (
+        match_status IN ('Available', 'Selling Fast', 'Sold Out')
+    )
+);
+
