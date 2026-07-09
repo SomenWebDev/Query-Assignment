@@ -9,3 +9,11 @@ CREATE TABLE users (
     phone_number VARCHAR(20) UNIQUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- insert data into users table
+
+INSERT INTO users(full_name, email, role, phone_number) VALUES
+  ('Tanvir Rahman', 'info@tabvir.com', 'Football Fan', +8801714924473),
+  ('Asif Haque', 'info@asif.com', 'Football Fan', +8801980000473),
+  ('Sajjad Rahman', 'info@sajjad.com', 'Football Fan', +8801814924473),
+  ('Jannat Ara', 'info@jannat.com', 'Football Fan', +8801830765243);
